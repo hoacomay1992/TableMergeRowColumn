@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class ItemFirtWidget extends StatelessWidget {
   const ItemFirtWidget({
     Key? key,
-    this.width = 50,
-    this.height = 50,
+    this.width = 40,
+    this.height = 30,
     this.right = false,
     this.top = true,
     this.left = true,
@@ -137,8 +137,8 @@ class ItemFirtWidget extends StatelessWidget {
 class ItemWidget extends StatelessWidget {
   const ItemWidget({
     Key? key,
-    this.width = 50,
-    this.height = 50,
+    this.width = 40,
+    this.height = 30,
     this.right = false,
     this.top = false,
     this.left = true,

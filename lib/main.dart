@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors
 
+import 'package:excels_demo/table.dart';
 import 'package:flutter/material.dart';
 import 'package:linked_scroll_controller/linked_scroll_controller.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: HomePage());
+        home: TableData());
   }
 }
 
@@ -29,7 +30,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  //double iconSize = 40;
   LinkedScrollControllerGroup? _controllers;
   ScrollController? _controller1;
   ScrollController? _controller2;
@@ -169,7 +169,7 @@ class _HomePageState extends State<HomePage> {
                         children: const [
                           ItemWidget(
                             width: 100,
-                            height: 100,
+                            height: 80,
                           ),
                         ],
                       ),
@@ -229,7 +229,7 @@ class _HomePageState extends State<HomePage> {
                       Column(
                         children: const [
                           ItemWidget(
-                            height: 100,
+                            height: 80,
                             bgColor: Colors.blue,
                           ),
                         ],
