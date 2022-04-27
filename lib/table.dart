@@ -1,21 +1,27 @@
-import 'package:excels_demo/item_widget.dart';
-import 'package:excels_demo/row_data.dart/data_row4.dart';
-import 'package:excels_demo/row_data.dart/data_row5.dart';
-import 'package:excels_demo/row_data.dart/row_data1.dart';
-import 'package:excels_demo/row_data.dart/row_data2.dart';
-import 'package:excels_demo/row_data.dart/row_data6.dart';
-import 'package:excels_demo/row_data.dart/row_data9.dart';
+import 'package:excels_demo/row_data.dart/init_binding.dart';
+import 'package:excels_demo/row_data.dart/row_data11.dart';
+import 'package:excels_demo/row_data.dart/row_data12.dart';
+import 'package:excels_demo/row_data.dart/row_data4/row_data4.dart';
+import 'package:excels_demo/row_data.dart/row_data5/row_data5.dart';
+import 'package:excels_demo/row_data.dart/row_data1/row_data1.dart';
+import 'package:excels_demo/row_data.dart/row_data2/row_data2.dart';
+import 'package:excels_demo/row_data.dart/row_data6.1/row_data6.1.dart';
+import 'package:excels_demo/row_data.dart/row_data6/row_data6.dart';
+import 'package:excels_demo/row_data.dart/row_data71/row_data71.dart';
+import 'package:excels_demo/row_data.dart/row_data9/row_data9.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:linked_scroll_controller/linked_scroll_controller.dart';
 
-import 'row_data.dart/data_row3.dart';
-import 'row_data.dart/row_data7.dart';
-import 'row_data.dart/row_data8.dart';
+import 'row_data.dart/row_data10/row_data10.dart';
+import 'row_data.dart/row_data3/row_data3.dart';
+import 'row_data.dart/row_data7/row_data7.dart';
+import 'row_data.dart/row_data8/row_data8.dart';
 
 class TableData extends StatefulWidget {
   const TableData({Key? key}) : super(key: key);
   final double width = 40;
-  final double height = 30;
+  final double height = 40;
   @override
   State<TableData> createState() => _TableDataState();
 }
@@ -33,6 +39,9 @@ class _TableDataState extends State<TableData> {
   ScrollController? _controller9;
   ScrollController? _controller10;
   ScrollController? _controller11;
+  ScrollController? _controller12;
+  ScrollController? _controller13;
+  ScrollController? _controller14;
   @override
   void initState() {
     super.initState();
@@ -48,6 +57,9 @@ class _TableDataState extends State<TableData> {
     _controller9 = _controllerHorizontal?.addAndGet();
     _controller10 = _controllerHorizontal?.addAndGet();
     _controller11 = _controllerHorizontal?.addAndGet();
+    _controller12 = _controllerHorizontal?.addAndGet();
+    _controller13 = _controllerHorizontal?.addAndGet();
+    _controller14 = _controllerHorizontal?.addAndGet();
   }
 
   @override
@@ -63,21 +75,16 @@ class _TableDataState extends State<TableData> {
     _controller9?.dispose();
     _controller10?.dispose();
     _controller11?.dispose();
+    _controller12?.dispose();
+    _controller13?.dispose();
+    _controller14?.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> data1 = List<Widget>.generate(35, (index) {
-      if (index == 0) {
-        return ItemFirtWidget();
-      } else {
-        return ItemFirtWidget(
-          top: false,
-        );
-      }
-    });
-    return MaterialApp(
+    return GetMaterialApp(
+      initialBinding: InitBinding(),
       theme: ThemeData(
         primaryColor: Colors.white,
         primaryColorDark: Colors.grey,
@@ -123,18 +130,20 @@ class _TableDataState extends State<TableData> {
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    controller: _controller8,
+                    controller: _controller7,
                     child: RowData7(width: widget.width, height: widget.height),
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     controller: _controller8,
-                    child: RowData6(width: widget.width, height: widget.height),
+                    child:
+                        RowData61(width: widget.width, height: widget.height),
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     controller: _controller9,
-                    child: RowData7(width: widget.width, height: widget.height),
+                    child:
+                        RowData71(width: widget.width, height: widget.height),
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -145,6 +154,24 @@ class _TableDataState extends State<TableData> {
                     scrollDirection: Axis.horizontal,
                     controller: _controller11,
                     child: RowData9(width: widget.width, height: widget.height),
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    controller: _controller12,
+                    child:
+                        RowData10(width: widget.width, height: widget.height),
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    controller: _controller13,
+                    child:
+                        RowData11(width: widget.width, height: widget.height),
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    controller: _controller14,
+                    child:
+                        RowData12(width: widget.width, height: widget.height),
                   ),
                 ],
               ),

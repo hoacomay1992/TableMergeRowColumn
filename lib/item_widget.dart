@@ -4,18 +4,16 @@ class ItemFirtWidget extends StatelessWidget {
   const ItemFirtWidget({
     Key? key,
     this.width = 40,
-    this.height = 30,
+    this.height = 40,
     this.right = false,
     this.top = true,
     this.left = true,
     this.bottom = true,
     this.bgColor,
     this.boderColor = Colors.grey,
-    this.child = const Center(
-      child: TextField(
-        decoration: InputDecoration(border: InputBorder.none),
-      ),
-    ),
+    this.center = false,
+    this.child =
+        const TextField(decoration: InputDecoration(border: InputBorder.none)),
   }) : super(key: key);
   final bool right;
   final bool top;
@@ -26,10 +24,14 @@ class ItemFirtWidget extends StatelessWidget {
   final Widget? child;
   final Color? bgColor;
   final Color boderColor;
+  final bool center;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: child,
+      padding:
+          center == false ? const EdgeInsets.only(left: 3, right: 3) : null,
+      child: Center(child: child),
       decoration: () {
         if (left && top && right && bottom) {
           return BoxDecoration(
@@ -138,17 +140,16 @@ class ItemWidget extends StatelessWidget {
   const ItemWidget({
     Key? key,
     this.width = 40,
-    this.height = 30,
+    this.height = 40,
     this.right = false,
     this.top = false,
     this.left = true,
     this.bottom = true,
     this.bgColor,
+    this.center = false,
     this.boderColor = Colors.grey,
-    this.child = const Center(
-      child: TextField(
-        decoration: InputDecoration(border: InputBorder.none),
-      ),
+    this.child = const TextField(
+      decoration: InputDecoration(border: InputBorder.none),
     ),
   }) : super(key: key);
   final bool right;
@@ -160,10 +161,13 @@ class ItemWidget extends StatelessWidget {
   final Widget child;
   final Color? bgColor;
   final Color boderColor;
+  final bool center;
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: child,
+      padding:
+          center == false ? const EdgeInsets.only(left: 3, right: 3) : null,
+      child: Center(child: child),
       decoration: () {
         if (left && top && right && bottom) {
           return BoxDecoration(

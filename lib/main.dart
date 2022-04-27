@@ -1,9 +1,6 @@
-// ignore_for_file: use_key_in_widget_constructors
-
 import 'package:excels_demo/table.dart';
 import 'package:flutter/material.dart';
 import 'package:linked_scroll_controller/linked_scroll_controller.dart';
-
 import 'item_widget.dart';
 
 void main() {
