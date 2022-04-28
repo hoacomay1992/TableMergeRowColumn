@@ -89,6 +89,7 @@ class _TableDataState extends State<TableData> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
+    final Orientation _orientation = MediaQuery.of(context).orientation;
     return GetMaterialApp(
       initialBinding: InitBinding(),
       theme: ThemeData(
@@ -104,7 +105,8 @@ class _TableDataState extends State<TableData> {
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: FractionallySizedBox(
-                      heightFactor: 0.85,
+                      heightFactor:
+                          _orientation == Orientation.portrait ? 0.85 : 0.75,
                       child: Container(
                         padding: const EdgeInsets.all(1),
                         decoration: BoxDecoration(
@@ -211,7 +213,8 @@ class _TableDataState extends State<TableData> {
                     alignment: Alignment.topCenter,
                     child: FractionallySizedBox(
                       alignment: Alignment.topCenter,
-                      heightFactor: 0.15,
+                      heightFactor:
+                          _orientation == Orientation.portrait ? 0.15 : 0.25,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         controller: _controller0,
