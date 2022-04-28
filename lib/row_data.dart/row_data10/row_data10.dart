@@ -1,4 +1,5 @@
 import 'package:excels_demo/row_data.dart/row_data10/row_data10_controller.dart';
+import 'package:excels_demo/themes/theme.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/instance_manager.dart';
 
@@ -224,6 +225,7 @@ class RowData10 extends StatelessWidget {
                     child: EditTextWidget(
                       textAlign: TextAlign.center,
                       controller: _controller.rd10_c6d,
+                      hindTextStyle: hindTextStyleBold,
                       hindText: '0',
                     ),
                     width: width * 4 / 3),
@@ -232,6 +234,7 @@ class RowData10 extends StatelessWidget {
                     child: EditTextWidget(
                       textAlign: TextAlign.center,
                       controller: _controller.rd10_c7d,
+                      hindTextStyle: hindTextStyleBold,
                       hindText: '-3',
                     ),
                     width: width * 4 / 3),
@@ -240,6 +243,7 @@ class RowData10 extends StatelessWidget {
                     child: EditTextWidget(
                       textAlign: TextAlign.center,
                       controller: _controller.rd10_c8d,
+                      hindTextStyle: hindTextStyleBold,
                       hindText: '-4',
                     ),
                     width: width * 4 / 3),
@@ -382,6 +386,7 @@ class RowData10 extends StatelessWidget {
                     child: EditTextWidget(
                       textAlign: TextAlign.center,
                       controller: _controller.rd10_c11d,
+                      hindTextStyle: hindTextStyleBold,
                       hindText: '-2',
                     ),
                     width: width * 4 / 3),
@@ -390,6 +395,7 @@ class RowData10 extends StatelessWidget {
                     child: EditTextWidget(
                       textAlign: TextAlign.center,
                       controller: _controller.rd10_c12d,
+                      hindTextStyle: hindTextStyleBold,
                       hindText: '-4',
                     ),
                     width: width * 4 / 3),
@@ -398,6 +404,7 @@ class RowData10 extends StatelessWidget {
                     child: EditTextWidget(
                       textAlign: TextAlign.center,
                       controller: _controller.rd10_c13d,
+                      hindTextStyle: hindTextStyleBold,
                       hindText: '-7',
                     ),
                     width: width * 4 / 3),
@@ -543,6 +550,7 @@ class RowData10 extends StatelessWidget {
                     child: EditTextWidget(
                       textAlign: TextAlign.center,
                       controller: _controller.rd10_c16d,
+                      hindTextStyle: hindTextStyleBold,
                       hindText: '-2',
                     ),
                     width: width * 4 / 3),
@@ -551,6 +559,7 @@ class RowData10 extends StatelessWidget {
                     child: EditTextWidget(
                       textAlign: TextAlign.center,
                       controller: _controller.rd10_c17d,
+                      hindTextStyle: hindTextStyleBold,
                       hindText: '-4',
                     ),
                     width: width * 4 / 3),
@@ -559,6 +568,7 @@ class RowData10 extends StatelessWidget {
                     child: EditTextWidget(
                       textAlign: TextAlign.center,
                       controller: _controller.rd10_c18d,
+                      hindTextStyle: hindTextStyleBold,
                       hindText: '-6',
                     ),
                     width: width * 4 / 3,

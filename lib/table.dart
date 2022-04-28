@@ -1,6 +1,6 @@
 import 'package:excels_demo/row_data.dart/init_binding.dart';
-import 'package:excels_demo/row_data.dart/row_data11.dart';
-import 'package:excels_demo/row_data.dart/row_data12.dart';
+import 'package:excels_demo/row_data.dart/data_row11/row_data11.dart';
+import 'package:excels_demo/row_data.dart/row_data12/row_data12.dart';
 import 'package:excels_demo/row_data.dart/row_data4/row_data4.dart';
 import 'package:excels_demo/row_data.dart/row_data5/row_data5.dart';
 import 'package:excels_demo/row_data.dart/row_data1/row_data1.dart';
@@ -9,6 +9,7 @@ import 'package:excels_demo/row_data.dart/row_data6.1/row_data6.1.dart';
 import 'package:excels_demo/row_data.dart/row_data6/row_data6.dart';
 import 'package:excels_demo/row_data.dart/row_data71/row_data71.dart';
 import 'package:excels_demo/row_data.dart/row_data9/row_data9.dart';
+import 'package:excels_demo/themes/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:linked_scroll_controller/linked_scroll_controller.dart';
@@ -28,6 +29,7 @@ class TableData extends StatefulWidget {
 
 class _TableDataState extends State<TableData> {
   LinkedScrollControllerGroup? _controllerHorizontal;
+  ScrollController? _controller0;
   ScrollController? _controller1;
   ScrollController? _controller2;
   ScrollController? _controller3;
@@ -46,6 +48,8 @@ class _TableDataState extends State<TableData> {
   void initState() {
     super.initState();
     _controllerHorizontal = LinkedScrollControllerGroup();
+    _controller0 = _controllerHorizontal?.addAndGet();
+
     _controller1 = _controllerHorizontal?.addAndGet();
     _controller2 = _controllerHorizontal?.addAndGet();
     _controller3 = _controllerHorizontal?.addAndGet();
@@ -64,6 +68,7 @@ class _TableDataState extends State<TableData> {
 
   @override
   void dispose() {
+    _controller0?.dispose();
     _controller1?.dispose();
     _controller2?.dispose();
     _controller3?.dispose();
@@ -83,6 +88,7 @@ class _TableDataState extends State<TableData> {
 
   @override
   Widget build(BuildContext context) {
+    final double height = MediaQuery.of(context).size.height;
     return GetMaterialApp(
       initialBinding: InitBinding(),
       theme: ThemeData(
@@ -92,91 +98,291 @@ class _TableDataState extends State<TableData> {
       home: Scaffold(
         body: SafeArea(
           child: Container(
-            margin: const EdgeInsets.all(10),
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
+              margin: const EdgeInsets.all(10),
+              child: Stack(
                 children: [
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller1,
-                    child: RowData1(width: widget.width, height: widget.height),
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: FractionallySizedBox(
+                      heightFactor: 0.85,
+                      child: Container(
+                        padding: const EdgeInsets.all(1),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey)),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              const SizedBox(
+                                height: 1,
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller1,
+                                child: RowData1(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller2,
+                                child: RowData2(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller3,
+                                child: RowData3(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller4,
+                                child: RowData4(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller5,
+                                child: RowData5(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller6,
+                                child: RowData6(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller7,
+                                child: RowData7(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller8,
+                                child: RowData61(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller9,
+                                child: RowData71(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller10,
+                                child: RowData8(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller11,
+                                child: RowData9(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller12,
+                                child: RowData10(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller13,
+                                child: RowData11(
+                                    width: widget.width, height: widget.height),
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                controller: _controller14,
+                                child: RowData12(
+                                    width: widget.width, height: widget.height),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller2,
-                    child: RowData2(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller3,
-                    child: RowData3(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller4,
-                    child: RowData4(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller5,
-                    child: RowData5(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller6,
-                    child: RowData6(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller7,
-                    child: RowData7(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller8,
-                    child:
-                        RowData61(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller9,
-                    child:
-                        RowData71(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller10,
-                    child: RowData8(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller11,
-                    child: RowData9(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller12,
-                    child:
-                        RowData10(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller13,
-                    child:
-                        RowData11(width: widget.width, height: widget.height),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    controller: _controller14,
-                    child:
-                        RowData12(width: widget.width, height: widget.height),
-                  ),
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: FractionallySizedBox(
+                      alignment: Alignment.topCenter,
+                      heightFactor: 0.15,
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        controller: _controller0,
+                        child: Container(
+                          decoration: const BoxDecoration(),
+                          width: widget.width * 31,
+                          child: Row(
+                            children: [
+                              Container(
+                                decoration: const BoxDecoration(),
+                                width: widget.width * 8,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                            flex: 1,
+                                            child: Text(
+                                              'Đơn vị: ',
+                                              style: textStyleNomal,
+                                            )),
+                                        const Expanded(
+                                          flex: 5,
+                                          child: TextField(
+                                            decoration: InputDecoration(
+                                                border: InputBorder.none,
+                                                hintText:
+                                                    '.......................'),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    const TextField(
+                                      decoration: InputDecoration(
+                                          border: InputBorder.none,
+                                          hintText:
+                                              '...................................'),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                decoration: const BoxDecoration(),
+                                width: widget.width * 15,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'BẢNG TÍNH LƯỢNG SỬA ĐIỀU KIỆN KHÍ TƯỢNG, ĐƯỜNG ĐẠN',
+                                      style: titleTextStyleBold,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Expanded(
+                                            flex: 2,
+                                            child: Center(
+                                                child: Text(
+                                              'vĩ độ trận địa bắn: ',
+                                              style: textStyleNomal,
+                                            ))),
+                                        const Expanded(
+                                          flex: 5,
+                                          child: TextField(
+                                            decoration: InputDecoration(
+                                                border: InputBorder.none,
+                                                hintText:
+                                                    '..............................................'),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                decoration: const BoxDecoration(),
+                                width: widget.width * 8,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                            flex: 2,
+                                            child: Text(
+                                              'Tính hổi: ',
+                                              style: textStyleNomal,
+                                            )),
+                                        const Expanded(
+                                          flex: 4,
+                                          child: TextField(
+                                            decoration: InputDecoration(
+                                                border: InputBorder.none,
+                                                hintText:
+                                                    '.................................................................'),
+                                          ),
+                                        ),
+                                        Expanded(
+                                            flex: 1,
+                                            child: Text(
+                                              'giờ: ',
+                                              style: textStyleNomal,
+                                            )),
+                                        const Expanded(
+                                          flex: 3,
+                                          child: TextField(
+                                            decoration: InputDecoration(
+                                                border: InputBorder.none,
+                                                hintText:
+                                                    '....................'),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                            child: Text(
+                                          'Ngày: ',
+                                          style: textStyleNomal,
+                                        )),
+                                        const Expanded(
+                                          child: TextField(
+                                            decoration: InputDecoration(
+                                                border: InputBorder.none,
+                                                hintText: '.................'),
+                                          ),
+                                        ),
+                                        Expanded(
+                                            child: Text(
+                                          'tháng: ',
+                                          style: textStyleNomal,
+                                        )),
+                                        const Expanded(
+                                          child: TextField(
+                                            decoration: InputDecoration(
+                                                border: InputBorder.none,
+                                                hintText: '.................'),
+                                          ),
+                                        ),
+                                        Expanded(
+                                            child: Text(
+                                          'năm: ',
+                                          style: textStyleNomal,
+                                        )),
+                                        const Expanded(
+                                          child: TextField(
+                                            decoration: InputDecoration(
+                                                border: InputBorder.none,
+                                                hintText:
+                                                    '.........................'),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
                 ],
-              ),
-            ),
-          ),
+              )),
         ),
       ),
     );

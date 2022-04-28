@@ -6,6 +6,7 @@ import 'package:get/instance_manager.dart';
 
 import 'data_row11/row_data11_controller.dart';
 import 'row_data10/row_data10_controller.dart';
+import 'row_data12/row_data12_controller.dart';
 import 'row_data5/row_data5_controller.dart';
 import 'row_data6.1/row_data61_controller.dart';
 import 'row_data6/row_data6_controller.dart';
@@ -30,5 +31,6 @@ class InitBinding implements Bindings {
     Get.put(RowData9Controller());
     Get.put(RowData10Controller());
     Get.put(RowData11Controller());
+    Get.put(RowData12Controller());
   }
 }
