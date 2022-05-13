@@ -1,5 +1,8 @@
+import 'package:excels_demo/calculator/calculator_impl.dart';
+import 'package:excels_demo/row_data.dart/init_binding.dart';
 import 'package:excels_demo/table.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:linked_scroll_controller/linked_scroll_controller.dart';
 import 'item_widget.dart';
 
@@ -12,16 +15,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
+    return GetMaterialApp(
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primaryColor: Colors.white,
+          primaryColorDark: Colors.grey,
         ),
-        home: TableData());
+        initialBinding: InitBinding(),
+        title: 'Flutter Demo',
+        home: const TableData());
   }
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -299,6 +306,16 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            print('Click here');
+          },
+          child: const Icon(
+            Icons.show_chart,
+            color: Colors.white,
+          ),
+          backgroundColor: Colors.blue,
         ),
       ),
     );

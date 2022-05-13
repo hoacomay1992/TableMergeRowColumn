@@ -1,3 +1,4 @@
+import 'package:excels_demo/calculator/calculator_impl.dart';
 import 'package:excels_demo/row_data.dart/init_binding.dart';
 import 'package:excels_demo/row_data.dart/data_row11/row_data11.dart';
 import 'package:excels_demo/row_data.dart/row_data12/row_data12.dart';
@@ -90,13 +91,7 @@ class _TableDataState extends State<TableData> {
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
     final Orientation _orientation = MediaQuery.of(context).orientation;
-    return GetMaterialApp(
-      initialBinding: InitBinding(),
-      theme: ThemeData(
-        primaryColor: Colors.white,
-        primaryColorDark: Colors.grey,
-      ),
-      home: Scaffold(
+    return Scaffold(
         body: SafeArea(
           child: Container(
               margin: const EdgeInsets.all(10),
@@ -387,7 +382,26 @@ class _TableDataState extends State<TableData> {
                 ],
               )),
         ),
-      ),
-    );
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Get.put(CalculatorImpl());
+            showDialog(
+                context: context,
+                builder: (context) {
+                  return AlertDialog(
+                    title: const Center(child: Text('Data')),
+                    content: Text(Get.find<CalculatorImpl>().showData()),
+                  );
+                  // return Container(
+                  //     width: 100,
+                  //     height: 100,
+                  //     decoration: const BoxDecoration(),
+                  //     child: FittedBox(
+                  //         child: Text(Get.find<CalculatorImpl>().showData())));
+                });
+          },
+          child: const Icon(Icons.display_settings),
+          tooltip: 'Click to show data',
+        ));
   }
 }
