@@ -1,3 +1,4 @@
+import 'package:excels_demo/moduls/bai_tap_ban_bien/components/btbb_data1/btbb_data1_controller.dart';
 import 'package:excels_demo/row_data.dart/row_data1/row_data1_controller.dart';
 import 'package:excels_demo/row_data.dart/row_data2/row_data2_controller.dart';
 import 'package:excels_demo/row_data.dart/row_data3/row_data3_controller.dart';
@@ -32,5 +33,7 @@ class InitBinding implements Bindings {
     Get.put(RowData10Controller());
     Get.put(RowData11Controller());
     Get.put(RowData12Controller());
+
+    Get.put(BTBBData1Controller());
   }
 }

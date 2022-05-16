@@ -5,7 +5,8 @@ import 'package:get/instance_manager.dart';
 import '../../item_widget.dart';
 
 class RowData1 extends StatelessWidget {
-  RowData1({required this.width, required this.height});
+  const RowData1({Key? key, required this.width, required this.height})
+      : super(key: key);
   final double width;
   final double height;
   @override

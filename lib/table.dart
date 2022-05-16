@@ -1,5 +1,5 @@
 import 'package:excels_demo/calculator/calculator_impl.dart';
-import 'package:excels_demo/row_data.dart/init_binding.dart';
+import 'package:excels_demo/components/drawer/drawer_widget.dart';
 import 'package:excels_demo/row_data.dart/data_row11/row_data11.dart';
 import 'package:excels_demo/row_data.dart/row_data12/row_data12.dart';
 import 'package:excels_demo/row_data.dart/row_data4/row_data4.dart';
@@ -11,6 +11,7 @@ import 'package:excels_demo/row_data.dart/row_data6/row_data6.dart';
 import 'package:excels_demo/row_data.dart/row_data71/row_data71.dart';
 import 'package:excels_demo/row_data.dart/row_data9/row_data9.dart';
 import 'package:excels_demo/themes/theme.dart';
+import 'package:excels_demo/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:linked_scroll_controller/linked_scroll_controller.dart';
@@ -89,9 +90,10 @@ class _TableDataState extends State<TableData> {
 
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height;
-    final Orientation _orientation = MediaQuery.of(context).orientation;
     return Scaffold(
+        drawer: const Drawer(
+          child: Drawerwidget(),
+        ),
         body: SafeArea(
           child: Container(
               margin: const EdgeInsets.all(10),
@@ -101,7 +103,9 @@ class _TableDataState extends State<TableData> {
                     alignment: Alignment.bottomCenter,
                     child: FractionallySizedBox(
                       heightFactor:
-                          _orientation == Orientation.portrait ? 0.85 : 0.75,
+                          context.getOrientation == Orientation.portrait
+                              ? 0.85
+                              : 0.75,
                       child: Container(
                         padding: const EdgeInsets.all(1),
                         decoration: BoxDecoration(
@@ -209,7 +213,9 @@ class _TableDataState extends State<TableData> {
                     child: FractionallySizedBox(
                       alignment: Alignment.topCenter,
                       heightFactor:
-                          _orientation == Orientation.portrait ? 0.15 : 0.25,
+                          context.getOrientation == Orientation.portrait
+                              ? 0.15
+                              : 0.25,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         controller: _controller0,
