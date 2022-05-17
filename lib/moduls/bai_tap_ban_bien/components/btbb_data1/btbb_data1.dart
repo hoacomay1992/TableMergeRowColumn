@@ -3,6 +3,8 @@ import 'package:excels_demo/moduls/bai_tap_ban_bien/components/btbb_data1/btbb_d
 import 'package:excels_demo/themes/theme.dart';
 import 'package:excels_demo/utils/utils.dart';
 import 'package:excels_demo/widgets.dart/edit_text_widget.dart';
+import 'package:excels_demo/widgets.dart/sub_script_text.dart';
+import 'package:excels_demo/widgets.dart/super_script_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
 import 'package:get/get.dart';
@@ -267,10 +269,10 @@ class BTTBData1 extends StatelessWidget {
                     height: height * 6,
                     right: true,
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: const[
-                          Expanded(child: TeXViewDocumentExamples()),
+                      children: const [
+                        Spacer(),
+                        Expanded(flex: 2, child: TeXViewDocumentExamples()),
+                        Spacer()
                       ],
                     ),
                   )
@@ -282,8 +284,287 @@ class BTTBData1 extends StatelessWidget {
         const SizedBox(
           width: 10,
         ),
-        Container(),
+        Container(
+            width: width * 15,
+            height: height * 8,
+            padding: const EdgeInsets.all(10.0),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey),
+            ),
+            child: Column(
+              children: [
+                Expanded(
+                    flex: 1,
+                    child: Row(
+                      children: [
+                        Flexible(
+                          child: EditTextWidget(
+                            controller: _controller.btbb1_tb2_c1,
+                            hindText: '1101',
+                          ),
+                        ),
+                        const Spacer(),
+                        Flexible(
+                          child: EditTextWidget(
+                            controller: _controller.btbb1_tb2_c2,
+                            hindText: '08630',
+                          ),
+                        ),
+                        const Spacer(),
+                        Flexible(
+                          child: EditTextWidget(
+                            controller: _controller.btbb1_tb2_c3,
+                            hindText: '0060',
+                          ),
+                        ),
+                        const Spacer(),
+                        Flexible(
+                          child: EditTextWidget(
+                            controller: _controller.btbb1_tb2_c4,
+                            hindText: '01513',
+                          ),
+                        ),
+                        const Spacer(
+                          flex: 5,
+                        ),
+                      ],
+                    )),
+                Expanded(
+                    flex: 2,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const Flexible(
+                          child: ColumnItem(
+                            text1: '02',
+                            text2: '16',
+                          ),
+                        ),
+                        const Spacer(),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '13',
+                            hindText2: '07',
+                            textEditingController1: _controller.btbb1_tb2_c1a,
+                            textEditingController2: _controller.btbb1_tb2_c1b,
+                          ),
+                        ),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '08',
+                            hindText2: '06',
+                            textEditingController1: _controller.btbb1_tb2_c2a,
+                            textEditingController2: _controller.btbb1_tb2_c2b,
+                          ),
+                        ),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '06',
+                            hindText2: '08',
+                            textEditingController1: _controller.btbb1_tb2_c3a,
+                            textEditingController2: _controller.btbb1_tb2_c3b,
+                          ),
+                        ),
+                        const Spacer(),
+                        ///////
+                        const Flexible(
+                          child: ColumnItem(
+                            text1: '04',
+                            text2: '20',
+                          ),
+                        ),
+                        const Spacer(),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '12',
+                            hindText2: '06',
+                            textEditingController1: _controller.btbb1_tb2_c4a,
+                            textEditingController2: _controller.btbb1_tb2_c4b,
+                          ),
+                        ),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '08',
+                            hindText2: '06',
+                            textEditingController1: _controller.btbb1_tb2_c5a,
+                            textEditingController2: _controller.btbb1_tb2_c5b,
+                          ),
+                        ),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '06',
+                            hindText2: '08',
+                            textEditingController1: _controller.btbb1_tb2_c6a,
+                            textEditingController2: _controller.btbb1_tb2_c6b,
+                          ),
+                        ),
+                        const Spacer(),
+
+                        ///
+                        const Flexible(
+                          child: ColumnItem(
+                            text1: '08',
+                            text2: '24',
+                          ),
+                        ),
+                        const Spacer(),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '09',
+                            hindText2: '06',
+                            textEditingController1: _controller.btbb1_tb2_c7a,
+                            textEditingController2: _controller.btbb1_tb2_c7b,
+                          ),
+                        ),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '07',
+                            hindText2: '05',
+                            textEditingController1: _controller.btbb1_tb2_c8a,
+                            textEditingController2: _controller.btbb1_tb2_c8b,
+                          ),
+                        ),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '07',
+                            hindText2: '09',
+                            textEditingController1: _controller.btbb1_tb2_c9a,
+                            textEditingController2: _controller.btbb1_tb2_c9b,
+                          ),
+                        ),
+                        const Spacer(),
+
+                        ///
+                        const Flexible(
+                          child: ColumnItem(
+                            text1: '12',
+                            text2: '30',
+                          ),
+                        ),
+                        const Spacer(),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '08',
+                            hindText2: '05',
+                            textEditingController1: _controller.btbb1_tb2_c10a,
+                            textEditingController2: _controller.btbb1_tb2_c10b,
+                          ),
+                        ),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '07',
+                            hindText2: '06',
+                            textEditingController1: _controller.btbb1_tb2_c11a,
+                            textEditingController2: _controller.btbb1_tb2_c11b,
+                          ),
+                        ),
+                        Flexible(
+                          child: ColumnDataItem(
+                            hindTex1: '08',
+                            hindText2: '10',
+                            textEditingController1: _controller.btbb1_tb2_c12a,
+                            textEditingController2: _controller.btbb1_tb2_c12b,
+                          ),
+                        )
+                      ],
+                    )),
+                Expanded(
+                    flex: 2,
+                    child: Row(
+                      children: const [
+                        SuperScriptText(
+                          text: 'T',
+                          subText: '0',
+                          textStyle: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                          ),
+                          subTextStyle: TextStyle(fontSize: 11),
+                          nextText: '1 = ',
+                        )
+                      ],
+                    )),
+              ],
+            ))
       ],
+    );
+  }
+}
+
+class ColumnItem extends StatelessWidget {
+  const ColumnItem({
+    Key? key,
+    required this.text1,
+    required this.text2,
+    this.textStyle = const TextStyle(
+      fontFamily: 'TimesNewRoman',
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
+    ),
+  }) : super(key: key);
+  final String text1;
+  final String text2;
+  final TextStyle textStyle;
+  @override
+  Widget build(BuildContext context) {
+    return FractionallySizedBox(
+      heightFactor: 0.47,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text(
+            text1,
+            style: textStyle,
+          ),
+          Text(
+            text2,
+            style: textStyle,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ColumnDataItem extends StatelessWidget {
+  const ColumnDataItem({
+    Key? key,
+    this.hindTex1,
+    this.hindText2,
+    this.textEditingController1,
+    this.textEditingController2,
+  }) : super(key: key);
+  final String? hindTex1;
+  final String? hindText2;
+
+  final TextEditingController? textEditingController1;
+  final TextEditingController? textEditingController2;
+  @override
+  Widget build(BuildContext context) {
+    return FractionallySizedBox(
+      heightFactor: 0.8,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Flexible(
+            child: EditTextWidget(
+              contentPadding: const EdgeInsets.all(0.0),
+              hindText: hindTex1,
+              controller: textEditingController1,
+            ),
+          ),
+          Flexible(
+            child: EditTextWidget(
+              contentPadding: const EdgeInsets.all(0.0),
+              hindText: hindText2,
+              controller: textEditingController2,
+            ),
+          ),
+          const Spacer(
+            flex: 2,
+          )
+        ],
+      ),
     );
   }
 }

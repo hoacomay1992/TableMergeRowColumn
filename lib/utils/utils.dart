@@ -6,11 +6,8 @@ extension GetOrientation on BuildContext {
 }
 
 class TeXExample {
-
-  static TeXViewWidget alphaHC =
-  _teXViewWidget(r"<h5>\(aHC=15-00\)</h5>");
-  static TeXViewWidget dh =
-  _teXViewWidget(r"<h5>\(aM=30-00\)</h5>");
+  static TeXViewWidget alphaHC = _teXViewWidget(r"<h5>\(aHC=15-00\)</h5>");
+  static TeXViewWidget dh = _teXViewWidget(r"<h5>\(aM=30-00\)</h5>");
   static TeXViewWidget alPhaM =
       _teXViewWidget(r"<h5>\(aM=aHC-{{ĐH_m}}+30-00\)</h5>");
   static TeXViewWidget tgh =
@@ -21,6 +18,7 @@ class TeXExample {
     );
   }
 }
+
 class TeXViewDocumentExamples extends StatelessWidget {
   final TeXViewRenderingEngine renderingEngine;
 
@@ -39,9 +37,10 @@ class TeXViewDocumentExamples extends StatelessWidget {
           TeXExample.alPhaM,
           TeXExample.tgh,
         ]),
-        // style: const TeXViewStyle(
-        //   backgroundColor: Colors.white,
-        // ),
+        style: const TeXViewStyle(
+          padding: TeXViewPadding.all(10),
+          //backgroundColor: Colors.white,
+        ),
       ),
     );
   }

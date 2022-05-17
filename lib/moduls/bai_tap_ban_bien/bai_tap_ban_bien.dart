@@ -38,7 +38,7 @@ class _BaiTapBanBienState extends State<BaiTapBanBien> {
     return Scaffold(
       body: SafeArea(
           child: Container(
-            decoration: const BoxDecoration(),
+        decoration: const BoxDecoration(),
         margin: const EdgeInsets.all(10),
         child: SingleChildScrollView(
           child: SingleChildScrollView(
