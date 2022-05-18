@@ -6,7 +6,7 @@ import 'package:excels_demo/widgets.dart/edit_text_widget.dart';
 import 'package:excels_demo/widgets.dart/sub_script_text.dart';
 import 'package:excels_demo/widgets.dart/super_script_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_tex/flutter_tex.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/instance_manager.dart';
 
@@ -471,17 +471,117 @@ class BTTBData1 extends StatelessWidget {
                 Expanded(
                     flex: 2,
                     child: Row(
-                      children: const [
-                        SuperScriptText(
-                          text: 'T',
-                          subText: '0',
-                          textStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          decoration: const BoxDecoration(),
+                          width: 40,
+                          child: const SuperScriptText(
+                            text: 'T',
+                            subText: '0',
+                            textStyle: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                            subTextStyle: TextStyle(fontSize: 11),
+                            nextText: '1 = ',
                           ),
-                          subTextStyle: TextStyle(fontSize: 11),
-                          nextText: '1 = ',
-                        )
+                        ),
+                        Container(
+                          decoration: const BoxDecoration(),
+                          width: 20,
+                          child: EditTextWidget(
+                            textAlignVertical: TextAlignVertical.top,
+                            contentPadding: const EdgeInsets.all(0.0),
+                            hindText: '20',
+                            controller: _controller.btbb1_tb2_do_c,
+                          ),
+                        ),
+                        Container(
+                          decoration: const BoxDecoration(),
+                          width: 40,
+                          child: const SuperScriptText(
+                            text: '',
+                            subText: '0',
+                            textStyle: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                            subTextStyle: TextStyle(fontSize: 11),
+                            nextText: 'C ;',
+                          ),
+                        ),
+                        Image.asset(
+                          'assets/images/delta.png',
+                          width: 15,
+                          height: 15,
+                        ),
+                        Container(
+                          decoration: const BoxDecoration(),
+                          width: 70,
+                          child: const SubScriptText(
+                            text: 'V',
+                            subText: '0',
+                            textStyle: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                            subTextStyle: TextStyle(fontSize: 11),
+                            nextText: 'hợp= +',
+                          ),
+                        ),
+                        Container(
+                          decoration: const BoxDecoration(),
+                          width: 25,
+                          child: EditTextWidget(
+                            textAlignVertical: TextAlignVertical.top,
+                            contentPadding: const EdgeInsets.all(0.0),
+                            hindText: '0,5',
+                            controller: _controller.btbb1_tb2_vo_hop,
+                          ),
+                        ),
+                        const Text('%'),
+                        Container(
+                          decoration: const BoxDecoration(),
+                          width: 40,
+                          child: const SubScriptText(
+                            text: 'V',
+                            subText: '0',
+                            textStyle: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                            subTextStyle: TextStyle(fontSize: 11),
+                            nextText: ' ;',
+                          ),
+                        ),
+                        Container(
+                          decoration: const BoxDecoration(),
+                          width: 30,
+                          child: const SubScriptText(
+                            text: 'H',
+                            subText: 'F',
+                            textStyle: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                            subTextStyle: TextStyle(fontSize: 11),
+                            nextText: '=',
+                          ),
+                        ),
+                        Container(
+                          decoration: const BoxDecoration(),
+                          width: 20,
+                          child: EditTextWidget(
+                            textAlignVertical: TextAlignVertical.top,
+                            contentPadding: const EdgeInsets.all(0.0),
+                            hindText: '10',
+                            controller: _controller.btbb1_tb2_hf,
+                          ),
+                        ),
+                        const Text('m ;'),
+                         Text(' Liều nguyên',style: PrimaryFonts.normal(PrimaryFonts.timesNewRoman, 16),),
                       ],
                     )),
               ],
@@ -505,6 +605,7 @@ class ColumnItem extends StatelessWidget {
   final String text1;
   final String text2;
   final TextStyle textStyle;
+
   @override
   Widget build(BuildContext context) {
     return FractionallySizedBox(
@@ -539,6 +640,7 @@ class ColumnDataItem extends StatelessWidget {
 
   final TextEditingController? textEditingController1;
   final TextEditingController? textEditingController2;
+
   @override
   Widget build(BuildContext context) {
     return FractionallySizedBox(

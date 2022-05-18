@@ -10,6 +10,7 @@ TextStyle textStyleNomal = PrimaryFonts.normal(PrimaryFonts.timesNewRoman, 16)
 
 class PrimaryFonts {
   static String timesNewRoman = 'TimesNewRoman';
+
   static TextStyle bold(String fontFamily, double size) {
     return TextStyle(
         fontFamily: fontFamily, fontSize: size, fontWeight: FontWeight.bold);
@@ -47,3 +48,7 @@ class PrimaryFonts {
     return TextStyle(fontSize: size, fontWeight: FontWeight.w900);
   }
 }
+
+final TextStyle styleBold = PrimaryFonts.bold(PrimaryFonts.timesNewRoman, 16).copyWith(color: Colors.black);
+final TextStyle styleNomal =
+    PrimaryFonts.normal(PrimaryFonts.timesNewRoman, 16);

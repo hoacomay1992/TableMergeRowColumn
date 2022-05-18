@@ -69,4 +69,8 @@ class BTBBData1Controller extends GetxController {
 
   TextEditingController btbb1_tb2_c12a = TextEditingController();
   TextEditingController btbb1_tb2_c12b = TextEditingController();
+
+  TextEditingController btbb1_tb2_do_c = TextEditingController();
+  TextEditingController btbb1_tb2_vo_hop = TextEditingController();
+  TextEditingController btbb1_tb2_hf = TextEditingController();
 }

@@ -45,3 +45,5 @@ class TeXViewDocumentExamples extends StatelessWidget {
     );
   }
 }
+const String delta='\u{0394}';
+const String alpha='\u{03B1}';

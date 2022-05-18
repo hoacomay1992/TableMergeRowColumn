@@ -406,7 +406,7 @@ class _TableDataState extends State<TableData> {
                   //         child: Text(Get.find<CalculatorImpl>().showData())));
                 });
           },
-          child: const Icon(Icons.display_settings),
+          child: const Icon(Icons.show_chart),
           tooltip: 'Click to show data',
         ));
   }

@@ -9,8 +9,8 @@ class SuperScriptText extends StatelessWidget {
       this.textStyle,
       this.subTextStyle})
       : super(key: key);
-  final String text;
-  final String subText;
+  final String? text;
+  final String? subText;
   final String? nextText;
   final TextStyle? textStyle;
   final TextStyle? subTextStyle;
@@ -23,7 +23,7 @@ class SuperScriptText extends StatelessWidget {
           child: Transform.translate(
             offset: const Offset(0.0, -7.0),
             child: Text(
-              subText,
+              subText ?? '',
               style: subTextStyle,
             ),
           ),
