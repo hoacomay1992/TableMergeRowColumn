@@ -1,5 +1,7 @@
 import 'package:excels_demo/moduls/bai_tap_ban_bien/components/btbb_data1/btbb_data1.dart';
 import 'package:excels_demo/moduls/bai_tap_ban_bien/components/btbb_data2/btbb_data2.dart';
+import 'package:excels_demo/moduls/bai_tap_ban_bien/components/btbb_data3/btbb_data3.dart';
+import 'package:excels_demo/moduls/bai_tap_ban_bien/components/btbb_data4/btbb_data4.dart';
 import 'package:flutter/material.dart';
 import 'package:linked_scroll_controller/linked_scroll_controller.dart';
 
@@ -15,6 +17,8 @@ class _BaiTapBanBienState extends State<BaiTapBanBien> {
   LinkedScrollControllerGroup? _controllerHorizontal;
   ScrollController? _controller0;
   ScrollController? _controller1;
+  ScrollController? _controller2;
+  ScrollController? _controller3;
 
   @override
   void initState() {
@@ -22,6 +26,8 @@ class _BaiTapBanBienState extends State<BaiTapBanBien> {
     _controllerHorizontal = LinkedScrollControllerGroup();
     _controller0 = _controllerHorizontal?.addAndGet();
     _controller1 = _controllerHorizontal?.addAndGet();
+    _controller2 = _controllerHorizontal?.addAndGet();
+    _controller3 = _controllerHorizontal?.addAndGet();
 
   }
 
@@ -29,6 +35,8 @@ class _BaiTapBanBienState extends State<BaiTapBanBien> {
   void dispose() {
     _controller0?.dispose();
     _controller1?.dispose();
+    _controller2?.dispose();
+    _controller3?.dispose();
     super.dispose();
   }
 
@@ -57,6 +65,22 @@ class _BaiTapBanBienState extends State<BaiTapBanBien> {
                 controller: _controller1,
                 scrollDirection: Axis.horizontal,
                 child: BTTBData2(
+                  width: widget.width,
+                  height: widget.height,
+                ),
+              ),
+              SingleChildScrollView(
+                controller: _controller3,
+                scrollDirection: Axis.horizontal,
+                child: BTTBData4(
+                  width: widget.width,
+                  height: widget.height,
+                ),
+              ),
+              SingleChildScrollView(
+                controller: _controller2,
+                scrollDirection: Axis.horizontal,
+                child: BTTBData3(
                   width: widget.width,
                   height: widget.height,
                 ),

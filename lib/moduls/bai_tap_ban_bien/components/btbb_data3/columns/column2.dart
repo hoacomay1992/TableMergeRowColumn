@@ -18,85 +18,76 @@ class Column2 extends StatelessWidget {
     final BTBBData2Controller _controller = Get.find<BTBBData2Controller>();
     return Column(
       children: [
-        ItemFirtWidget(
-          width: width * 5,
-          child: Text(
-            'KQGH M',
-            style: styleBold,
-          ),
-        ),
-        Row(
-          children: [
-            ItemWidget(
-              width: width * 2,
-              child: Text(
-                '${alpha}Qt',
-                style: styleBold,
-              ),
-            ),
-            ItemWidget(
-              width: width * 3,
-              child: Text(
-                '${alpha}Qf',
-                style: styleBold,
-              ),
-            ),
-          ],
+
+        RowData(
+          hindTextStyle1: styleBold,
+          width: width*2,
+          width2: width*3,
+          controller1: _controller.btbb2_c2_r8a,
+          controller2: _controller.btbb2_c2_r8b,
+          hindText1: '1506',
+          hindText2: '1373',
         ),
         RowData(
           hindTextStyle1: styleBold,
           width: width*2,
           width2: width*3,
-          controller1: _controller.btbb2_c2_r1a,
-          controller2: _controller.btbb2_c2_r1b,
-          hindText1: '1460',
-          hindText2: '1342',
+          controller1: _controller.btbb2_c2_r9a,
+          controller2: _controller.btbb2_c2_r9b,
+          hindText1: '1514',
+          hindText2: '1379',
         ),
         RowData(
           hindTextStyle1: styleBold,
           width: width*2,
           width2: width*3,
-          controller1: _controller.btbb2_c2_r2a,
-          controller2: _controller.btbb2_c2_r2b,
-          hindText1: '1467',
-          hindText2: '1348',
+          controller1: _controller.btbb2_c2_r10a,
+          controller2: _controller.btbb2_c2_r10b,
+          hindText1: '1522',
+          hindText2: '1384',
         ),
         RowData(
           hindTextStyle1: styleBold,
           width: width*2,
           width2: width*3,
-          controller1: _controller.btbb2_c2_r3a,
-          controller2: _controller.btbb2_c2_r3b,
-          hindText1: '1475',
-          hindText2: '1353',
+          controller1: _controller.btbb2_c2_r11a,
+          controller2: _controller.btbb2_c2_r11b,
+          hindText1: '1530',
+          hindText2: '1389',
         ),
         RowData(
           hindTextStyle1: styleBold,
           width: width*2,
           width2: width*3,
-          controller1: _controller.btbb2_c2_r4a,
-          controller2: _controller.btbb2_c2_r4b,
-          hindText1: '1483',
-          hindText2: '1358',
+          controller1: _controller.btbb2_c2_r12a,
+          controller2: _controller.btbb2_c2_r12b,
+          hindText1: '1538',
+          hindText2: '1394',
         ),
         RowData(
           hindTextStyle1: styleBold,
           width: width*2,
           width2: width*3,
-          controller1: _controller.btbb2_c2_r5a,
-          controller2: _controller.btbb2_c2_r5b,
-          hindText1: '1490',
-          hindText2: '1363',
+          controller1: _controller.btbb2_c2_r13a,
+          controller2: _controller.btbb2_c2_r13b,
+          hindText1: '1547',
+          hindText2: '1400',
         ),
         RowData(
           hindTextStyle1: styleBold,
           width: width*2,
           width2: width*3,
-          controller1: _controller.btbb2_c2_r6a,
-          controller2: _controller.btbb2_c2_r6b,
-          hindText1: '1498',
-          hindText2: '1368',
+          controller1: _controller.btbb2_c2_r14a,
+          controller2: _controller.btbb2_c2_r14b,
+
         ),
+        RowData(
+          hindTextStyle1: styleBold,
+          width: width*2,
+          width2: width*3,
+          controller1: _controller.btbb2_c2_r15a,
+          controller2: _controller.btbb2_c2_r15b,
+        )
       ],
     );
   }

@@ -1,3 +1,4 @@
+import 'package:excels_demo/themes/theme.dart';
 import 'package:flutter/material.dart';
 
 class EditTextWidget extends StatelessWidget {
@@ -8,7 +9,7 @@ class EditTextWidget extends StatelessWidget {
       this.contentTextStyle,
       this.onEditingComplete,
       this.textAlignVertical = TextAlignVertical.center,
-      this.hindTextStyle = const TextStyle(
+      this.hindTextStyle = const TextStyle(fontFamily: 'TimesNewRoman',
           color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal),
       this.textAlign = TextAlign.start,
       this.keyboardType = TextInputType.number,
@@ -32,7 +33,7 @@ class EditTextWidget extends StatelessWidget {
       keyboardType: keyboardType,
       textAlign: textAlign,
       textAlignVertical: textAlignVertical,
-      style: contentTextStyle,
+      style: contentTextStyle??hindTextStyle,
       controller: controller,
       onEditingComplete: onEditingComplete,
       decoration: InputDecoration(
