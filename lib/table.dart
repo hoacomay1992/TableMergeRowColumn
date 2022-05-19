@@ -104,8 +104,8 @@ class _TableDataState extends State<TableData> {
                     child: FractionallySizedBox(
                       heightFactor:
                           context.getOrientation == Orientation.portrait
-                              ? 0.85
-                              : 0.75,
+                              ? 0.75
+                              : 0.65,
                       child: Container(
                         padding: const EdgeInsets.all(1),
                         decoration: BoxDecoration(
@@ -209,13 +209,13 @@ class _TableDataState extends State<TableData> {
                     ),
                   ),
                   Align(
-                    alignment: Alignment.topCenter,
+                    alignment:const  Alignment(0.0,-0.95),
                     child: FractionallySizedBox(
                       alignment: Alignment.topCenter,
                       heightFactor:
                           context.getOrientation == Orientation.portrait
-                              ? 0.15
-                              : 0.25,
+                              ? 0.25
+                              : 0.35,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         controller: _controller0,
